@@ -14,9 +14,11 @@ before_install:
   - brew update
   - brew tap facebook/fb
   - brew install buck
+  - brew cask install java
   - brew outdated xctool || brew upgrade xctool
   - brew install mono
   - which java
+  - ls /Library/Java/JavaVirtualMachines/
 
 script:
   - buck test //:CSSLayout
