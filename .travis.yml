@@ -16,6 +16,7 @@ before_install:
   - brew install buck
   - brew outdated xctool || brew upgrade xctool
   - brew install mono
+  - which java
 
 script:
   - buck test //:CSSLayout
