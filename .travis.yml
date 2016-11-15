@@ -17,8 +17,9 @@ before_install:
   - brew cask install java
   - brew outdated xctool || brew upgrade xctool
   - brew install mono
+  - export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+  - export PATH=$JAVA_HOME/bin:$PATH
   - which java
-  - ls /Library/Java/JavaVirtualMachines/
 
 script:
   - buck test //:CSSLayout
